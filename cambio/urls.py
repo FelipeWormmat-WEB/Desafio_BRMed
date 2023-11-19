@@ -1,3 +1,8 @@
 from django.urls import path
 
-# Create your urls here.
+from .views import ConsultaMoeda
+
+app_name = "cambio"
+
+
+urlpatterns = [path("", ConsultaMoeda.as_view(), name="index")]
